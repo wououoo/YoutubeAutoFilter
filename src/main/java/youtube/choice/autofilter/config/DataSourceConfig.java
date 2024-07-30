@@ -25,10 +25,10 @@ public class DataSourceConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("youtubeMusicFilterService");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/youtubeMusicFilterService");
-        dataSource.setUsername("youtubeMusicFilterService");
-        dataSource.setPassword("youtubeMusicFilterService");
+        dataSource.setDriverClassName(dbDriverClassName);
+        dataSource.setUrl(dbUrl);
+        dataSource.setUsername(dbUsername);
+        dataSource.setPassword(dbPassword);
         return dataSource;
     }
 }
